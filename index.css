@@ -1,0 +1,436 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    overflow: hidden;
+}
+
+input:focus {
+    outline: none;
+    background-color: #ffffff;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 68px;
+    align-items: center;
+    background-color: #0013FE;
+    gap: 80px;
+    color: white;
+
+}
+
+.headerButtons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.main {
+    width: 100%;
+    padding-left: 56px;
+    padding-right: 56px;
+}
+
+.searchBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 78px;
+
+}
+
+.searchImg {
+    background-image: url(favicons/lupa.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    padding-left: 25px;
+    height: 40px;
+    width: 318px;
+    border: solid 1px;
+    border-color: #E6ECF0;
+    border-radius: 3px;
+
+
+}
+
+.buttonsGray {
+    background-color: #E6ECF0;
+    /* padding: 10px 23px; */
+    border-radius: 5px;
+    width: 103.33px;
+    height: 40px;
+    border-style: none;
+
+}
+
+.buttonsDirection {
+    display: flex;
+    justify-content: flex-end;
+    width: 318px;
+    gap: 3px;
+
+}
+
+.blueButton {
+    background-color: #0013FE;
+    padding: 10px 23px;
+    border-radius: 5px;
+    white-space: nowrap;
+    border-style: none;
+    color: aliceblue;
+}
+
+.tools {
+    display: flex;
+    gap: 51px;
+    /* height: 816px; */
+    /* width: 318px;
+    background-color: #E6ECF0; */
+    /* padding: 19px; */
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.bars {
+    /* display: flex;
+    gap: 15px; */
+    /* height: 816px; */
+    height: fit-content;
+    width: 318px;
+    background-color: #E6ECF0;
+    padding: 15px;
+
+
+}
+
+.number3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D5D5D5;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 12.5px;
+
+}
+
+.minus {
+    display: flex;
+    justify-content: center;
+    background-color: #D5D5D5;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.plus {
+    align-items: center;
+    display: flex;
+    left: 296px;
+    top: 160px;
+    justify-content: center;
+    background-color: #D5D5D5;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 0px;
+}
+
+.tasks {
+    width: 290px;
+    /* height: 126px; */
+    border-radius: 5px;
+    background-color: #ffffff;
+    /* padding: 20px; */
+    display: grid;
+    gap: 7px;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+}
+
+.viverraDiam {
+    background-color: #0013FE;
+    /* width: 130px; */
+    /* height: 36px; */
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.screp {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    width: 15px;
+    height: 35px;
+    width: 100%;
+    padding: 22px;
+    border-top: 0.7px solid #E6ECF0;
+}
+
+.imageSmall {
+    position: absolute;
+    display: flex;
+    left: 320px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
+
+.titleHeader {
+    border-bottom: 0.7px solid #E6ECF0;
+    padding: 12px;
+}
+
+.titleBody {
+    padding: 10px;
+}
+
+.tagsContainer {
+    display: flex;
+    gap: 3px;
+    overflow-x: auto;
+    max-width: 266px;
+}
+
+.tasksContainer {
+    /* max-height: 480px; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #878080;
+}
+
+.barsForJs {
+    display: flex;
+    gap: 9px;
+    justify-content: space-between;
+
+}
+
+.b {
+    padding: 12px;
+}
+
+.unknown {
+    display: flex;
+    gap: 9px;
+}
+
+.fileCount {
+    opacity: 0.5
+}
+
+.tasks:active {
+
+    cursor: grabbing;
+    opacity: 0.5;
+}
+
+.borderBottom {
+    display: flex;
+    border-bottom: 0.7px solid #E6ECF0;
+    justify-content: space-between;
+}
+
+.moreButton {
+    position: relative;
+    cursor: pointer;
+
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transform: 1s;
+
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -50px;
+    top: 30px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(1, 1, 0, 0.2);
+    padding: 3px 1px;
+    z-index: 1;
+}
+
+.h:hover {
+    background-color: #c2c9cd;
+    font-size: large;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.allContain {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.dialog {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    width: 333px;
+    height: 250px;
+    background-color: #c2c9cd;
+    border: none;
+    border-radius: 15px;
+
+}
+
+
+
+.dialogInput {
+    background-repeat: no-repeat;
+    background-position: 5px;
+    padding-left: 25px;
+    height: 40px;
+    width: 318px;
+    border: solid 1px;
+    border-color: #E6ECF0;
+    border-radius: 3px;
+
+}
+
+
+/* CSS */
+.button-10 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: 6px;
+    border: none;
+
+    color: #fff;
+    background: #0013FE;
+    background-origin: border-box;
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-10:focus {
+    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+    outline: 0;
+}
+
+.divDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+.dialogDialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    /* background-color: #bbc0c3; */
+    width: 400px;
+
+}
+
+.divButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px;
+    gap: 9px;
+    margin-bottom: 0px;
+}
+
+/* 
+input[type=text]:focus {
+    background-color: lightblue;
+    border: 1px solid;
+    border-color: #0013FE;
+
+} */
+
+input {
+    border: solid 1px;
+    border-color: #E6ECF0;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+    font-size: large;
+}
+
+.select {
+    position: relative;
+    min-width: 200px;
+    min-height: 40px;
+    /* -webkit-appearance: initial; */
+    padding: 7px 40px 7px 12px;
+    width: 100%;
+    border: 1px solid #E8EAED;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 1px 3px -2px #9098A9;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* ----------------- */
+
+.mt-1 {
+    margin-top: 8px;
+
+
+}
+
+.mt-2 {
+    margin-top: 16px;
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="/favicons/1589574.png">
+</head>
+
+<body>
+    <div class="header">
+        <!-- <div class="headerButtons">
+            <img alt="box" src="/favicons/Vector.png"> Backlog
+        </div>
+        <div class="headerButtons">
+            <img alt="box" src="/favicons/border.png"> Border
+        </div>
+        <div class="headerButtons">
+            <img alt="box" src="/favicons/feed.png"> Feed
+        </div>
+        <div class="headerButtons">
+            <img alt="box" src="/favicons/reports.png"> Reports
+        </div> -->
+    </div>
+    <div class="main">
+        <div id="searchBar" class="searchBar">
+            <input id="search" class="searchImg" placeholder=" Search Items" type="text" oninput="search_task(event)">
+
+            <div class="buttonsDirection">
+
+
+                <!-- <button onclick=" dialog()" class="blueButton">New Item</button> -->
+
+
+                <button id="upLoad" onclick="upLoad()" class="buttonsGray">Load</button>
+
+                <button onclick="createFile()" class="buttonsGray">Save</button>
+
+
+
+            </div>
+
+
+        </div>
+        <dialog class="dialogDialog" id="favDialog">
+            <h3 id="DialogHeader" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center;  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;">
+                New Item</h3>
+            <form>
+                <div style="display: flex; flex-direction: column;">
+                    <label>Title<br>
+                        <input id="titleID" type="text">
+                    </label>
+                    <label class="mt-2">Tags<br>
+                        <input id="tagID" type="text">
+                    </label>
+                    <label class="mt-2">Text<br>
+                        <input id="tetxID" type="text">
+                    </label>
+                    <label class="mt-2">Number
+                        <select class="select" id="numberId">
+                            <option type='button' value="default">0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+
+                        </select>
+                    </label>
+                    </label>
+                    <label class="mt-2">Priority
+                        <select class="select" id="priorityId">
+                            <option value="default">Low</option>
+                            <option>high</option>
+                            <option>medium</option>
+                            <option>low</option>
+                        </select>
+                    </label>
+                    <label class="mt-2">Date<br>
+                        <input id="dateId" type="datetime">
+                    </label>
+                </div>
+                <div class="divButtons">
+                    <button class="buttonsGray" value="cancel" formmethod="dialog">Cancel</button>
+                    <button class="blueButton" id="confirmBtn" type="button" value="default"
+                        onclick="onClickConfirmButton(event)">Submit</button>
+                </div>
+            </form>
+        </dialog>
+        <!-- <p>
+                <button id="showDialog">Show the dialog</button>
+            </p>
+            <output>Fave:</output> -->
+
+
+
+        <div class="tools">
+            <!-- <div class="bars">
+                <div style="display: flex; gap: 9px; justify-content: space-between;">
+                    <div style="display: flex; gap: 15px;">
+                        <p>To Do</p>
+
+                        <div class="number3">3</div>
+                    </div>
+
+                    <div style="display: flex; justify-content: end ; gap: 6px;">
+                        <div class=" plus">+</div>
+                        <div class="minus">...</div>
+                    </div>
+                </div>
+                <div id="task1" class="tasksContainer">
+                    <div class="tasks">
+                        <div class="titleHeader">
+
+                            <b>Mobile Wireframes</b>
+                        </div>
+                        <div class="titleBody">
+                            <div class="viverraDiam">Viverra Diam</div>
+
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/screp.png" alt="screp"> 3
+
+                            </div>
+                            <img src="favicons/flag.png" alt="flag">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Apr <div>12</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tasks">
+                        <div class="titleHeader">
+                            <b>User Research</b>
+
+                        </div>
+                        <div class="titleBody">
+
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                dolor.
+                                Aenean
+                                massa. Cum sociis natoque …</p>
+                            <br>
+                            <div class="viverraDiam">Maecenas Lacus</div>
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/screp.png" alt="screp"> 1
+                            </div>
+                            <img src="favicons/flagGreen.png">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Mar <div>4</div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="tasks">
+                        <div class="titleHeader">
+                            <b>Client Call</b>
+
+                        </div>
+                        <div class="titleBody">
+
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                dolor.
+                                Aenean
+                                massa. Cum sociis natoque …</p>
+                            <br>
+                            <div class="viverraDiam">Eget Integer</div>
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/transperentSrep.png" alt="screp">
+                            </div>
+                            <img src="favicons/flagGreen.png">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Apr <div>2</div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bars">
+                <div style="display: flex; gap: 9px; justify-content: space-between;">
+                    <div style="display: flex; gap: 15px;">
+                        <p>In Progress </p>
+
+                        <div class="number3">2</div>
+                    </div>
+
+                    <div style="display: flex; justify-content: end;gap: 6px;">
+                        <div class=" plus">+</div>
+                        <div class="minus">...</div>
+                    </div>
+
+                </div>
+                <div id="task2" class="tasksContainer">
+
+                    <div class="tasks">
+                        <div class="titleHeader">
+
+                            <b>Login Flow</b>
+                        </div>
+                        <div class="titleBody">
+
+                            <div class="viverraDiam">Nullam Velit</div>
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/transperentSrep.png" alt="screp">
+
+                            </div>
+                            <img src="favicons/flagYellow.png" alt="flag">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Apr <div>3</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tasks">
+                        <div class="titleHeader">
+
+                            <b>Forgot Password Screen</b>
+                        </div>
+                        <div class="titleBody">
+
+                            <div class="viverraDiam">Nullam Velit</div>
+                        </div>
+
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/transperentSrep.png" alt="screp">
+
+                            </div>
+                            <img src="favicons/flagGreen.png" alt="flag">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Apr <div>6</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bars">
+                <div style="display: flex; gap: 9px; justify-content: space-between;">
+                    <div style="display: flex; gap: 15px;">
+                        <p>In Review </p>
+
+                        <div class="number3">4</div>
+                    </div>
+
+                    <div style="display: flex; justify-content: end; gap: 6px;">
+                        <div class=" plus">+</div>
+                        <div class="minus">...</div>
+                    </div>
+
+                </div>
+                <div id="task3" class="tasksContainer">
+
+                    <div class="tasks">
+                        <div class="titleHeader">
+                            <b>Landing Page</b>
+
+                        </div>
+                        <div class="titleBody">
+
+                            <div class="viverraDiam">Maecenas Lacus</div>
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/screp.png" alt="screp">
+                                2
+                            </div>
+                            <img src="favicons/flagGreen.png" alt="flag">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Mar <div>8</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tasks">
+                        <div class="titleHeader">
+                            <b>Annual Persentiton</b>
+
+                        </div>
+                        <div class="titleBody">
+                            <div class="viverraDiam">Maecenas Lacus</div>
+
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/transperentSrep.png" alt="screp">
+
+                            </div>
+                            <img src="favicons/flagGreen.png" alt="flag">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Mar <div>15</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tasks">
+                        <div class="titleHeader">
+                            <b>Icons</b>
+
+                        </div>
+                        <div class="titleBody">
+
+                            <div class="viverraDiam">Egent Integer</div>
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/transperentSrep.png" alt="screp">
+
+                            </div>
+                            <img src="favicons/flagYellow.png" alt="flag">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Apr <div>10</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tasks">
+                        <div class="titleHeader">
+                            <b>Onboarding Screens</b>
+
+                        </div>
+                        <div class="titleBody">
+
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                dolor.
+                                Aenean
+                                massa.
+                                Cum
+                                sociis natoque …</p>
+                            <br>
+                            <div class="titleBody">
+
+                                <div class="viverraDiam">Maecenas Lacus</div>
+                            </div>
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/screp.png" alt="screp">1
+
+                            </div>
+                            <img src="favicons/flag.png" alt="flag">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Mar <div>17</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bars">
+                <div style="display: flex; gap: 9px; justify-content: space-between;">
+                    <div style="display: flex; gap: 15px;">
+                        <p>Done </p>
+
+                        <div class="number3">3</div>
+                    </div>
+
+                    <div style="display: flex; justify-content: end ;gap: 6px;">
+                        <div class=" plus">+</div>
+                        <div class="minus">...</div>
+                    </div>
+
+                </div>
+                <div id="task4" class="tasksContainer">
+
+                    <div class="tasks">
+                        <div class="titleHeader">
+
+                            <b>Annual Persentiton</b>
+                        </div>
+                        <div class="titleBody">
+                            <div class="viverraDiam">Viverra Diam</div>
+
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/transperentSrep.png" alt="screp">
+
+                            </div>
+                            <img src="favicons/flagGreen.png" alt="flag">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Mar <div>2</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tasks">
+                        <div class="titleHeader">
+                            <b>Annual Persentiton</b>
+
+                        </div>
+                        <div class="titleBody">
+
+                            <div class="viverraDiam">Nullam Velit</div>
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/transperentSrep.png" alt="screp">
+
+                            </div>
+                            <img src="favicons/flagYellow.png" alt="flag">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Mar <div>4</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tasks">
+                        <div class="titleHeader">
+
+                            <b>Annual Persentiton</b>
+                        </div>
+                        <div class="titleBody">
+
+                            <div class="viverraDiam">Maecenas Lacus</div>
+                        </div>
+                        <div class="screp">
+                            <div style="display: flex; gap: 9px;">
+                                <img src="favicons/transperentSrep.png" alt="screp">
+
+                            </div>
+                            <img src="favicons/flag.png" alt="flag">
+                            <div style="display: flex; gap: 9px; height: 20px; width: 20px;">
+                                <img src="favicons/clock.png" alt="clock">
+                                Mar <div>15</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
